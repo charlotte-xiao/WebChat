@@ -15,7 +15,8 @@ public class TencentRobot {
         return tencentRobot;
     }
     public String robotChat(String str) throws Exception{
-        TAipNlp client = new TAipNlp("2160840907", "XXxWPFgVn0SVntUH");
+        //这里将app_id和app_key修改为自己申请
+        TAipNlp client = new TAipNlp("XXXXXXXXXX", "XXXXXXXXXXXXXXXX");
         String session = new Date().getTime()/1000+"";//会话标识（应用内唯一）
 
         String result = client.nlpTextchat(session,str);//基础闲聊
