@@ -1,0 +1,110 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) {
+			"hgap": 5
+			"vgap": 5
+		} ) {
+			name: "this"
+			"resizable": false
+			"title": "iChat"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/image/ico.png" )
+			"minimumSize": new java.awt.Dimension( 500, 350 )
+			"maximizedBounds": new java.awt.Rectangle( 0, 0, 500, 350 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 2
+				"hgap": 10
+				"vgap": 10
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "启动"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "关闭"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+					"columns": 10
+					"editable": false
+					"rows": 10
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"text": "发送"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button3MouseClicked", true ) )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Last"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+					"columns": 1
+					"rows": 2
+				} ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "发送至:"
+						"maximumSize": new java.awt.Dimension( 15, 19 )
+						"minimumSize": new java.awt.Dimension( 15, 19 )
+						"preferredSize": new java.awt.Dimension( 15, 19 )
+						"horizontalTextPosition": 0
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "发送消息"
+						"maximumSize": new java.awt.Dimension( 15, 19 )
+						"minimumSize": new java.awt.Dimension( 15, 19 )
+						"horizontalTextPosition": 0
+						"horizontalAlignment": 0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Before"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+					"columns": 1
+					"rows": 2
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox1"
+						"maximumRowCount": 20
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "系统消息"
+							addElement( "系统消息" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField1KeyPressed", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 195, 65 )
+			"size": new java.awt.Dimension( 420, 300 )
+		} )
+	}
+}

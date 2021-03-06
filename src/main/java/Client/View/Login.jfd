@@ -1,0 +1,85 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) {
+			"hgap": 10
+			"vgap": 10
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 460, 330 )
+			"maximizedBounds": new java.awt.Rectangle( 0, 0, 460, 330 )
+			"title": "WebChat"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/image/ico.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 1
+				"hgap": 25
+				"vgap": 25
+				"rows": 3
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "URL"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "用户账号"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "用户密码"
+					"horizontalAlignment": 0
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 1
+				"rows": 3
+				"hgap": 30
+				"vgap": 30
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField1"
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					"maximumSize": new java.awt.Dimension( 61, 38 )
+					"text": "127.0.0.1:8080"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField2"
+					"maximumSize": new java.awt.Dimension( 61, 38 )
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "textField3"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 2
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "登录"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "重置"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 165, 50 )
+			"size": new java.awt.Dimension( 365, 265 )
+		} )
+	}
+}
